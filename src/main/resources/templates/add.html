@@ -21,6 +21,7 @@
                     th:text="${employer.name}"
                     th:value="${employer.id}"></option>
         </select>
+        <span th:errors="${job.employer}" class="error"></span>
         <a th:href="@{'/employers/add'}">Add Employers</a>
     </div>
 
@@ -30,6 +31,7 @@
             <input type="checkbox" name="skills" th:value="${skill.id}">
             <label th:text="${skill.name}"></label>
         </th:block>
+        <span th:errors="${job.skills}" class="error"></span>
         <a th:href="@{'/skills/add'}">Add Skills</a>
     </div>
 
